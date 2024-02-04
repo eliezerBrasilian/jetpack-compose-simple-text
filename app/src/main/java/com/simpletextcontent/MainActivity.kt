@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SimpleText( title = "LOrem lorem paulo pedro", maxLength = 10)
+                    SimpleText( title = "LOrem lorem paulo pedro")
                 }
             }
         }
