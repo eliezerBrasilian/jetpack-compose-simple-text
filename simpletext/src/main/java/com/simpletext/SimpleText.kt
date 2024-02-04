@@ -19,8 +19,15 @@ fun SimpleText(
     fontSize: TextUnit = 20.sp,
     marginLeft: Dp = 0.dp,
     marginRight: Dp = 0.dp,
-    fontWeight: FontWeight = FontWeight.Normal
+    fontWeight: FontWeight = FontWeight.Normal,
+    maxLength:Int = 0
 ){
-    Text(text = title, style = TextStyle(color = color, fontSize = fontSize, fontWeight = fontWeight),
+    var definitiveTitle = title;
+
+    if (maxLength > 0) {
+       definitiveTitle =  title.take(maxLength - 3) + "..."
+    }
+
+    Text(text = definitiveTitle, style = TextStyle(color = color, fontSize = fontSize, fontWeight = fontWeight),
         modifier = Modifier.padding(start = marginLeft, end = marginRight))
 }
